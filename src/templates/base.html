@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pointy</title>
+	<link rel="stylesheet" href="https://tools-static.wmflabs.org/cdnjs/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+	<script src="https://tools-static.wmflabs.org/cdnjs/ajax/libs/jquery/3.4.1/jquery.js" crossorigin="anonymous"></script>
+	<script src="https://tools-static.wmflabs.org/cdnjs/ajax/libs/socket.io/4.0.1/socket.io.js" crossorigin="anonymous"></script>
+	<script src="https://tools-static.wmflabs.org/cdnjs/ajax/libs/js-cookie/3.0.1/js.cookie.min.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="{{ url_for('index') }}">{{ nav_title }}</a>
+	</nav>
+	{% block content %}{% endblock %}
+	<footer class="container-fluid">
+		<hr>
+		Pointy (<a href="#">{{ _('source-code') }}</a>)
+		&middot; <a href="#" class="text-muted">{{ _('report-bug') }}</a>
+	</footer>
+	
+	<script src="https://tools-static.wmflabs.org/cdnjs/ajax/libs/popper.js/1.15.0/umd/popper.min.js" crossorigin="anonymous"></script>
+	<script src="https://tools-static.wmflabs.org/cdnjs/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.js" crossorigin="anonymous"></script>
+</body>
+</html>

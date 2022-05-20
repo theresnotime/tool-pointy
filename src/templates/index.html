@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="mb-3">
+        <label for="pointing_id" class="form-label">Pointing topic</label>
+        <input type="email" class="form-control" name="pointing_id" id="pointing_id" aria-describedby="id_help" placeholder="T12345" required>
+        <div id="id_help" class="form-text">You can also add a phabricator task here</div>
+    </div>
+
+    <button id="start_pointing" type="submit" class="btn btn-primary">Submit</button>
+</div>
+{% endblock %}
