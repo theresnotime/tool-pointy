@@ -33,7 +33,7 @@ $( function() {
                     }
                 );
                 debug( 'ws', 'emit', 'client.start_pointing' );
-                window.location.href = '/pointing/' + pointing_id;
+                window.location.href = encodeURI('/pointing/' + pointing_id);
             } else {
                 console.debug( 'Clicked. Val empty' );
                 //TODO: show error
