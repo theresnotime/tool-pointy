@@ -28,6 +28,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install --upgrade wheel setuptools
           pip install tox
+          pip install -r requirements.txt
       - name: Run tox
         # Run tox using the version of Python in `PATH`
         run: tox
