@@ -41,6 +41,12 @@ $( function() {
         });
     }
 
+    /**
+     * Verify and return a Phabricator task ID
+     * 
+     * @param {string} id Possible phabricator task ID
+     * @returns {string} Phabricator task ID
+     */
     function parsePhabUrl(id) {
         const re = /T\d+/gm;
         const found = id.match(re);
@@ -51,14 +57,31 @@ $( function() {
         }
     }
 
+    /**
+     * Show debug message
+     * 
+     * @param {string} topic 
+     * @param {string} action 
+     * @param {string} message 
+     */
     function debug( topic, action, message ) {
         console.debug( '[' + topic + '] [' + sessionId + ' @ ' + path + ']: ' + action + ': ' + message );
     }
 
+    /**
+     * Generate a random session ID
+     * 
+     * @returns {string} Session ID
+     */
     function generateSessionId() {
         return btoa( Math.random().toString( 36 ) );
     }
 
+    /**
+     * Get session ID from cookie
+     * 
+     * @returns {string} Session ID
+     */
     function getSessionId() {
         let sessionId = Cookies.get( 'pointy_session' );
         if ( sessionId === undefined ) {
