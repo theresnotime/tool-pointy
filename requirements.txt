@@ -4,4 +4,4 @@ Flask_SocketIO==5.3.1
 MarkupSafe==2.1.1
 PyYAML==6.0
 SQLAlchemy==1.4.39
-eventlet==0.33.1
+eventlet==0.33.2
