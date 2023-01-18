@@ -1,7 +1,7 @@
 Flask==2.2.2
 Flask_JSONLocale==1.11
 Flask_SocketIO==5.3.1
-MarkupSafe==2.1.1
+MarkupSafe==2.1.2
 PyYAML==6.0
 SQLAlchemy==1.4.39
 eventlet==0.33.1
